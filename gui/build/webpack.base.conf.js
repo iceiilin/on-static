@@ -21,18 +21,18 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.vue', '.json'],
-        fallback: [path.join(__dirname, '../node_modules')],
+        fallback: [path.join(__dirname, '../../node_modules')],
         alias: {
             'vue$': 'vue/dist/vue.common.js',
             'common-src': path.resolve(__dirname, '../src/common/lib/'),
-            'bootstrap': path.resolve(__dirname, '../node_modules/bootstrap/dist/css/bootstrap.css'),
+            'bootstrap': path.resolve(__dirname, '../../node_modules/bootstrap/dist/css/bootstrap.css'),
             'src': path.resolve(__dirname, '../src'),
             'assets': path.resolve(__dirname, '../src/assets'),
             'components': path.resolve(__dirname, '../src/components')
         }
     },
     resolveLoader: {
-        fallback: [path.join(__dirname, '../node_modules')]
+        fallback: [path.join(__dirname, '../../node_modules')]
     },
     module: {
         loaders: [

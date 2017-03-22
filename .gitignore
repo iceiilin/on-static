@@ -1,5 +1,10 @@
 # Dependency directories
-node_modules
+node_modules/
 
 # static file folder
-static/files/*
+static/
+
+gui/dist/
+npm-debug.log
+gui/test/unit/coverage
+gui/test/e2e/reports
