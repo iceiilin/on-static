@@ -98,9 +98,6 @@
                         console.log('err', err)
                     })
             },
-            // hostChanged: function(){
-            //     console.log('host changed', this.baseUrl);
-            // },
             hostChanged: debounce(function(){
                 this.baseUrl = "http://" + this.hostIpAddr + ":" + this.hostPort + '/';
             }, 500)
@@ -108,9 +105,6 @@
         mounted: function () {
             var self = this;
             self.getIsos();
-            // setInterval(function(){
-            //     self.getIsos();
-            // }, 3000);
         },
         computed: {
             isoKeys: function () {
@@ -122,16 +116,15 @@
                     return Object.keys(this.isos[0]);
                 }
             }
-            // baseUrl: function(){
-            //     return "http://" + this.hostIpAddr + ":" + this.hostPort + '/';
-            // }
         },
         data: function () {
+            var url = 'http://' + location.hostname + ":7070/";
+                //+ (location.port ? ':' + location.port : '') + '/';
             return {
                 isos: [{ size: 100, name: 'test' }],
-                hostIpAddr: "10.62.59.150",
+                hostIpAddr: location.hostname,
                 hostPort: "7070",
-                baseUrl: "http://10.62.59.150:7070/"
+                baseUrl: url
             }
         }
     }

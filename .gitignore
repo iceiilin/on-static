@@ -8,3 +8,4 @@ gui/dist/
 npm-debug.log
 gui/test/unit/coverage
 gui/test/e2e/reports
+inventory.json

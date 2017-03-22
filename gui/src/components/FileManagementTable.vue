@@ -43,7 +43,7 @@
             },
             baseUrl: {
                 type: String,
-                default: 'http://10.62.59.150:7070'
+                default: 'http://0.0.0.0:7070'
             },
             fileUploadUrl: {
                 type: String,
