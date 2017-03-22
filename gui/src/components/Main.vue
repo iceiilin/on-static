@@ -1,14 +1,14 @@
 <template>
     <div class="container">
         <nav class="navbar navbar-inverse navbar-fixed-top">
-            <a class="navbar-brand" href="#" style="color: white">on-static web ui</a>
+            <a class="navbar-brand" href="#" style="color: white">Image Service GUI</a>
         </nav>
 
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">On-Static Host Settings</h3>
+                    <h3 class="panel-title">Image Service Host Settings</h3>
                 </div>
                 <div class="input-group">
                         <label class="input-group-addon">IP address</label>
