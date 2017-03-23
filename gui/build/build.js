@@ -1,10 +1,10 @@
 // https://github.com/shelljs/shelljs
+"use strict";
+
 require('./check-versions')()
 require('shelljs/global')
-env.NODE_ENV = 'production'
+env.NODE_ENV = 'production' //jshint ignore:line
 
-var path = require('path')
-var config = require('../config')
 var ora = require('ora')
 var webpack = require('webpack')
 var webpackConfig = require('./webpack.prod.conf')
@@ -18,14 +18,20 @@ console.log(
 var spinner = ora('building for production...')
 spinner.start()
 
+/* jshint ignore:start */
+var path = require('path')
+var config = require('../config')
 var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
 rm('-rf', assetsPath)
 mkdir('-p', assetsPath)
 cp('-R', 'static/*', assetsPath)
+/* jshint ignore:end */
 
 webpack(webpackConfig, function (err, stats) {
   spinner.stop()
-  if (err) throw err
+  if (err) {
+      throw err
+  }
   process.stdout.write(stats.toString({
     colors: true,
     modules: false,

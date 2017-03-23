@@ -1,3 +1,5 @@
+<!-- Copyright 2016, EMC, Inc. -->
+
 <template>
     <div>
         <div class="input-group">

@@ -1,3 +1,5 @@
+<!-- Copyright 2016, EMC, Inc. -->
+
 <template>
     <div class="container">
         <nav class="navbar navbar-inverse navbar-fixed-top">

@@ -5,7 +5,6 @@
     "bitwise" : true,
     "camelcase" : true,
     "curly" : true,
-    "es3" : false,
     "eqeqeq" : true,
     "forin" : true,
     "freeze" : true,
@@ -30,12 +29,10 @@
     "unused" : true,
 
     //Relaxing
-    "asi" : false,
+    "asi" : true,       // compatible with styles of vue used as gui framework
     "boss" : false,
     "debug" : false,
     "eqnull" : false,
-    "es5" : false,
-    "esnext" : false,
     "moz" : false,
     "evil" : false,
     "expr" : true,     // true: Tolerate `ExpressionStatement` as Programs
@@ -54,6 +51,7 @@
     "sub" : false,
     "supernew" : false,
     "validthis" : false,
+    "esversion": 6,     // compatible with styles of vue used as gui framework
 
     // Environments
     "node": true,

@@ -1,11 +1,13 @@
+"use strict";
+
 var path = require('path')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.assetsPath = function (_path) {
-  var assetsSubDirectory = process.env.NODE_ENV === 'production'
-    ? config.build.assetsSubDirectory
-    : config.dev.assetsSubDirectory
+  var assetsSubDirectory = process.env.NODE_ENV === 'production' ?
+    config.build.assetsSubDirectory :
+    config.dev.assetsSubDirectory
   return path.posix.join(assetsSubDirectory, _path)
 }
 
@@ -51,11 +53,13 @@ exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)
   for (var extension in loaders) {
-    var loader = loaders[extension]
-    output.push({
-      test: new RegExp('\\.' + extension + '$'),
-      loader: loader
-    })
+    if (loaders.hasOwnProperty(extension)) {
+      var loader = loaders[extension]
+      output.push({
+        test: new RegExp('\\.' + extension + '$'),
+        loader: loader
+      })
+    }
   }
   return output
 }

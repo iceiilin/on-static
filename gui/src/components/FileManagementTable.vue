@@ -1,7 +1,9 @@
+<!-- Copyright 2016, EMC, Inc. -->
+
 <template>
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">{{ title }}    
+            <h3 class="panel-title">{{ title }}
                 <button type="button" class="btn btn-primary btn-xs btn-transparent" @click="getFiles">
                     <span class="glyphicon glyphicon-refresh"></span>
                 </button>
@@ -14,7 +16,7 @@
             <span v-if="!showFileUpload" class="glyphicon glyphicon-plus-sign"></span>
             <span v-else class="glyphicon glyphicon-minus-sign"></span>
         </button>
-        
+
         <FileUploader id="fileUpload" v-show="showFileUpload" :baseUrl="baseUrl" :fileUploadUrl="fileUploadUrl" :supportedFileTypes="supportedFileTypes" @finished="uploadFinished" @error="uploadErrored"></FileUploader>
     </div>
 </template>

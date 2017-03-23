@@ -16,7 +16,8 @@ module.exports = {
     },
     output: {
         path: config.build.assetsRoot,
-        publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
+        publicPath: process.env.NODE_ENV === 'production' ?
+          config.build.assetsPublicPath : config.dev.assetsPublicPath,
         filename: '[name].js'
     },
     resolve: {
@@ -25,7 +26,8 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js',
             'common-src': path.resolve(__dirname, '../src/common/lib/'),
-            'bootstrap': path.resolve(__dirname, '../../node_modules/bootstrap/dist/css/bootstrap.css'),
+            'bootstrap': path.resolve(__dirname,
+                                      '../../node_modules/bootstrap/dist/css/bootstrap.css'),
             'src': path.resolve(__dirname, '../src'),
             'assets': path.resolve(__dirname, '../src/assets'),
             'components': path.resolve(__dirname, '../src/components')

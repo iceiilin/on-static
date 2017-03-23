@@ -1,3 +1,5 @@
+"use strict";
+
 var semver = require('semver')
 var chalk = require('chalk')
 var packageConfig = require('../../package.json')
@@ -21,7 +23,8 @@ var versionRequirements = [
 
 module.exports = function () {
   var warnings = []
-  for (var i = 0; i < versionRequirements.length; i++) {
+  var i = 0
+  for (i = 0; i < versionRequirements.length; i++) { //jshint ignore:line
     var mod = versionRequirements[i]
     if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) {
       warnings.push(mod.name + ': ' +
@@ -35,7 +38,7 @@ module.exports = function () {
     console.log('')
     console.log(chalk.yellow('To use this template, you must update following to modules:'))
     console.log()
-    for (var i = 0; i < warnings.length; i++) {
+    for (i = 0; i < warnings.length; i++) { //jshint ignore:line
       var warning = warnings[i]
       console.log('  ' + warning)
     }
